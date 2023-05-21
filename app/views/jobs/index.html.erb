@@ -1,13 +1,6 @@
 
     <h1>Job Index</h1>
 
-
-<%# create below
-    1. job list
-    2. add button
-    3. click on job item will goto view for only one item
- %>
-
  <% @jobs.each do |job|%>
  <%= link_to job.job_title, job_path(job) %>
     
