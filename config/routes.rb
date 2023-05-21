@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'jobs#index'
   get 'new', to: 'jobs#new'
+  get 'show', to: 'jobs#show'
 end
