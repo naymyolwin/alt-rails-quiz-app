@@ -1,59 +1,101 @@
-<h1>New Job Form</h1>
+<div class="flex justify-center text-5xl my-10">
+    Create New Job
+</div>
 
 <%= form_with model: @job do |form| %>
+
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :url, "URL" %>
+        </div>
+        <div class="">
+            <%= form.text_field :url, class:"rounded-xl" %>
+        </div>
+    </div>
+
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :employer_name, "Employer Name" %>
+        </div>
+        <div class="">
+            <%= form.text_field :employer_name, class:"rounded-xl" %>
+        </div>
+    </div>
+
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :employer_description, "Employer Description" %>
+        </div>
+        <div class="">
+            <%= form.text_field :employer_description, class:"rounded-xl" %>
+        </div>
+    </div>
+
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :job_title, "Job Title" %>
+        </div>
+        <div class="">
+            <%= form.text_field :job_title, class:"rounded-xl" %>
+        </div>
+    </div>
     
-    <p>
-        <%= form.label :url %>
-        <%= form.text_field :url %>
-    </p>
-    
-    <p>
-        <%= form.label :employer_name %>
-        <%= form.text_field :employer_name %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :job_description, "Job Description" %>
+        </div>
+        <div class="">
+            <%= form.text_field :job_description, class:"rounded-xl" %>
+        </div>
+    </div>
 
-    <p>
-        <%= form.label :employer_description %>
-        <%= form.text_field :employer_description %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :year_of_experience, "Year of Experience" %>
+        </div>
+        <div class="">
+            <%= form.text_field :year_of_experience, class:"rounded-xl" %>
+        </div>
+    </div>
 
-    <p>
-        <%= form.label :job_title %>
-        <%= form.text_field :job_title %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :education_requirement, "Education" %>
+        </div>
+        <div class="">
+            <%= form.text_field :education_requirement, class:"rounded-xl" %>
+        </div>
+    </div>
 
-    <p>
-        <%= form.label :job_description %>
-        <%= form.text_field :job_description %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :industry, "Industry" %>
+        </div>
+        <div class="">
+            <%= form.text_field :industry, class:"rounded-xl" %>
+        </div>
+    </div>
 
-    <p>
-        <%= form.label :year_of_experience %>
-        <%= form.text_field :year_of_experience %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :base_salary, "Salary" %>
+        </div>
+        <div class="">
+            <%= form.text_field :base_salary, class:"rounded-xl" %>
+        </div>
+    </div>
 
-    <p>
-        <%= form.label :education_requirement %>
-        <%= form.text_field :education_requirement %>
-    </p>
-
-    <p>
-        <%= form.label :industry %>
-        <%= form.text_field :industry %>
-    </p>
-
-    <p>
-        <%= form.label :base_salary %>
-        <%= form.text_field :base_salary %>
-    </p>
-
-    <p>
-        <%= form.label :employment_type_id %>
-        <%= form.text_field :employment_type_id %>
-    </p>
+    <div class="flex text-xl p-5">
+        <div class="w-60">
+            <%= form.label :employment_type_id, "Employment type ID" %>
+        </div>
+        <div class="">
+            <%= form.text_field :employment_type_id, class:"rounded-xl" %>
+        </div>
+    </div>
   
-  <%= form.submit %>
+    <div class="flex justify-center mt-10">
+        <%= link_to 'Cancel', root_path, class: "m-2 bg-slate-400 px-7 py-3 rounded-xl text-white" %> 
+        <%= form.submit class: "m-2 bg-slate-400 px-7 py-3 rounded-xl text-white" %>
+    </div>
 <% end %>
-
-
-<%= link_to 'Cancel', root_path %>
