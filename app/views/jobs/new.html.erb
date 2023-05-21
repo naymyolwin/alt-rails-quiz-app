@@ -1,3 +1,59 @@
 <h1>New Job Form</h1>
 
+<%= form_with model: @job do |form| %>
+    
+    <p>
+        <%= form.label :url %>
+        <%= form.text_field :url %>
+    </p>
+    
+    <p>
+        <%= form.label :employer_name %>
+        <%= form.text_field :employer_name %>
+    </p>
+
+    <p>
+        <%= form.label :employer_description %>
+        <%= form.text_field :employer_description %>
+    </p>
+
+    <p>
+        <%= form.label :job_title %>
+        <%= form.text_field :job_title %>
+    </p>
+
+    <p>
+        <%= form.label :job_description %>
+        <%= form.text_field :job_description %>
+    </p>
+
+    <p>
+        <%= form.label :year_of_experience %>
+        <%= form.text_field :year_of_experience %>
+    </p>
+
+    <p>
+        <%= form.label :education_requirement %>
+        <%= form.text_field :education_requirement %>
+    </p>
+
+    <p>
+        <%= form.label :industry %>
+        <%= form.text_field :industry %>
+    </p>
+
+    <p>
+        <%= form.label :base_salary %>
+        <%= form.text_field :base_salary %>
+    </p>
+
+    <p>
+        <%= form.label :employment_type_id %>
+        <%= form.text_field :employment_type_id %>
+    </p>
+  
+  <%= form.submit %>
+<% end %>
+
+
 <%= link_to 'Cancel', root_path %>
