@@ -1,12 +1,15 @@
+<div class="my-10">
+    <h1 class="text-5xl text-center">Job Listing</h1>
 
-    <h1>Job Index</h1>
-
- <% @jobs.each do |job|%>
- <div>
- <%= link_to job.job_title, job_path(job) %>
- </div>
-    
- <% end %>
-<div>
-  <%= link_to 'Create New Job', new_job_path %> 
+    <% @jobs.each do |job|%>
+        <div class="text-lg m-5">
+            <%= link_to job.job_title, job_path(job), class:"text-blue-500" %> @ <%= job.employer_name %>
+            <hr>
+        </div>
+    <% end %>
 </div>
+<div class="flex justify-center">
+    <%= link_to 'Create New Job', new_job_path, class: "bg-slate-400 px-7 py-3 rounded-xl text-white" %> 
+</div>
+  
+

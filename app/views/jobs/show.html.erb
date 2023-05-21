@@ -1,7 +1,34 @@
-<h1>Show Page</h1>
-
-<div>
+<div class="flex justify-center text-5xl my-10">
     <%= @job.job_title %>
 </div>
+<div class="text-xl p-5">
+    <p>Employer Name : <%= @job.employer_name %></p> 
+</div>
 
-<%= link_to 'Back', root_path %>
+<div class="text-xl p-5">
+    <p>Employer Description : <%= @job.employer_description %></p> 
+</div>
+
+<div class="text-xl p-5">
+    <p>Job Description : <%= @job.job_description %></p> 
+</div>
+
+<div class="text-xl p-5">
+     <p>Experience : <%= pluralize(@job.year_of_experience, "year") %></p> 
+</div>
+
+<div class="text-xl p-5">
+     <p>Education : <%= @job.education_requirement %></p> 
+</div>
+
+<div class="text-xl p-5">
+     <p>Industry : <%= @job.industry %></p> 
+</div>
+
+<div class="text-xl p-5">
+     <p>Salary : <%= @job.base_salary %></p> 
+</div>
+
+<div class="flex justify-center mt-10">
+    <%= link_to 'Back', root_path, class: "bg-slate-400 px-7 py-3 rounded-xl text-white" %> 
+</div>
